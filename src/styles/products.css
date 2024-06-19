@@ -1,0 +1,22 @@
+.productImg {
+    max-width: 100px;
+    transition: max-width 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.productImg:hover {
+    transform: scale(1.1);
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 991px) {
+    .productDescription {
+        display: none;
+    }
+    .productImg {
+        max-width: 70px;
+    }
+}

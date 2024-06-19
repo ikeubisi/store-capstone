@@ -1,0 +1,165 @@
+:root {
+    --background-color-main: hsl(210, 36%, 96%);
+    /* Light blue for a soft background */
+    --box-shadow-main: 7px 4px 4px hsla(210, 22%, 49%, 0.6);
+    /* Soft blue shadow */
+    --box-shadow-secondary: 4px 3px 3px hsla(210, 22%, 49%, 0.6);
+    /* Soft blue shadow */
+    --card-bg-color: hsl(0, 0%, 100%);
+    /* White for card background */
+    --card-bg-color-secondary: hsl(210, 20%, 95%);
+    /* Very light blue for secondary card background */
+    --text-color-main: hsl(210, 22%, 22%);
+    /* Dark blue for main text */
+    --link-color: hsl(204, 86%, 53%);
+    /* Bright blue for links */
+    --link-hover-color: hsl(204, 76%, 42%);
+    /* Darker blue for link hover */
+    --btn-hover-bg-color: hsl(204, 86%, 53%);
+    /* Same bright blue for button hover */
+    --navbar-bg-gradient: linear-gradient(90deg, hsl(204, 86%, 53%) 0%, hsl(204, 76%, 42%) 100%);
+    /* Blue gradient for navbar */
+}
+
+body {
+    background-color: var(--background-color-main);
+    color: var(--text-color-main);
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+a:hover {
+    font-weight: bold;
+    color: var(--link-hover-color);
+}
+
+label {
+    font-weight: bold;
+}
+
+button,
+.btn {
+    box-shadow: var(--box-shadow-secondary);
+    height: 40px;
+    margin: 5px;
+    border: none;
+    background-color: var(--btn-hover-bg-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--link-hover-color);
+    box-shadow: var(--box-shadow-main);
+}
+
+footer {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: var(--link-color);
+}
+
+img {
+    box-shadow: var(--box-shadow-main);
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+nav {
+    font-size: 1.2rem;
+    background: var(--navbar-bg-gradient);
+    box-shadow: var(--box-shadow-main);
+    padding: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+#storeLogo {
+    max-width: 100px;
+}
+
+.btn {
+    border: solid 1px var(--link-color);
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.cartTotal {
+    background-color: var(--card-bg-color-secondary);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-main);
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    box-shadow: var(--box-shadow-main);
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.kitchenUtensils,
+.storeImage {
+    max-width: 250px;
+}
+
+.navbar {
+    background: var(--navbar-bg-gradient);
+    box-shadow: var(--box-shadow-main);
+    padding: 15px;
+}
+
+.storeImageContainer {
+    margin: 5px 0;
+    text-align: center;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 991px) {
+    nav ul {
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
